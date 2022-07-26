@@ -11,7 +11,7 @@
     <br><br>
 
     <section class="box">
-        <form action="">
+        <form action="/salvarAgricultores" id="formCadastroAgric" method="post">
             <fieldset>
                 <legend><b>Grupo Atto Sementes</b></legend>
                 <br>
@@ -26,10 +26,10 @@
                 </div>
                 <br><br>
                 <label for="cpf"><b>CPF / CNPJ:</b></label>
-                <input type="text" name="cpf" id="cpf" placeholder="CPF ou CNPJ" required>
+                <input type="text" name="cpf" id="cpf" placeholder="CPF ou CNPJ" maxlength="14" required>
                 <br><br>
                 <div class="inputBox">
-                    <input type="number" name="celular" id="celular" class="inputText" required>
+                    <input type="text" name="celular" id="celular" class="inputText" maxlength="15" required>
                     <label for="celular" class="labelInput">Celular</label>
                 </div>
                 <br><br>
@@ -71,7 +71,7 @@
                     <label for="cidade" class="labelInput">Cidade:</label>
                 </div>
                 <br><br>
-                <input type="submit" name="submit" id="submit">
+                <button type="button" name="btn" id="btn" onclick='javascript:validarCPF()'>Salvar</button>
             </fieldset>
         </form>
     </section>

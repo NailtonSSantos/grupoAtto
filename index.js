@@ -23,6 +23,11 @@ app.get('/cadastroAgricultores', (req, res) => {
     res.render('cadastroAgricultores');
 })
 
+app.post('/salvarAgricultores', (req, res) => {
+    console.log('Salvou');
+    res.send('Salvou o Agricultor');
+})
+
 
 //404 ERROR
 app.use((req, res) => { //middleware
