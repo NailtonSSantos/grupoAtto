@@ -7,15 +7,78 @@
 
     <%- include('partials/header.ejs')  %> 
 
-    <%- include('partials/navbar.ejs') %>
-
     <h1>Cadastro de Agricultores</h1>
+    <br><br>
 
-    <p>Fromulário Aqui</p>
+    <section class="box">
+        <form action="">
+            <fieldset>
+                <legend><b>Grupo Atto Sementes</b></legend>
+                <br>
+                <div class="inputBox">
+                    <input type="text" name="razaosocial" id="razaosocial" class="inputText" required>
+                    <label for="razaosocial" class="labelInput">Razão Social:</label>
+                </div>
+                <br><br>
+                <div class="inputBox">
+                    <input type="text" name="nomefantasia" id="nomefantasia" class="inputText" required>
+                    <label for="nomefantasia" class="labelInput">Nome Fantasia:</label>
+                </div>
+                <br><br>
+                <label for="cpf"><b>CPF / CNPJ:</b></label>
+                <input type="text" name="cpf" id="cpf" placeholder="CPF ou CNPJ" required>
+                <br><br>
+                <div class="inputBox">
+                    <input type="number" name="celular" id="celular" class="inputText" required>
+                    <label for="celular" class="labelInput">Celular</label>
+                </div>
+                <br><br>
+                <div class="inputBox">
+                    <select name="estado" id="estado" required>
+                        <option value="">Selecione</option>
+                        <option value="AC">Acre</option>
+                        <option value="AL">Alagoas</option>
+                        <option value="AP">Amapá</option>
+                        <option value="AM">Amazonas</option>
+                        <option value="BA">Bahia</option>
+                        <option value="CE">Ceará</option>
+                        <option value="DF">Distrito Federal</option>
+                        <option value="ES">Espirito Santo</option>
+                        <option value="GO">Goiás</option>
+                        <option value="MA">Maranhão</option>
+                        <option value="MS">Mato Grosso do Sul</option>
+                        <option value="MT">Mato Grosso</option>
+                        <option value="MG">Minas Gerais</option>
+                        <option value="PA">Pará</option>
+                        <option value="PB">Paraíba</option>
+                        <option value="PR">Paraná</option>
+                        <option value="PE">Pernambuco</option>
+                        <option value="PI">Piauí</option>
+                        <option value="RJ">Rio de Janeiro</option>
+                        <option value="RN">Rio Grande do Norte</option>
+                        <option value="RS">Rio Grande do Sul</option>
+                        <option value="RO">Rondônia</option>
+                        <option value="RR">Roraima</option>
+                        <option value="SC">Santa Catarina</option>
+                        <option value="SP">São Paulo</option>
+                        <option value="SE">Sergipe</option>
+                        <option value="TO">Tocantins</option>
+                    </select>
+                </div>
+                <br><br>
+                <div class="inputBox">
+                    <input type="text" name="cidade" id="cidade" class="inputText" required>
+                    <label for="cidade" class="labelInput">Cidade:</label>
+                </div>
+                <br><br>
+                <input type="submit" name="submit" id="submit">
+            </fieldset>
+        </form>
+    </section>
 
+<br><br>
 
     <%- include('partials/footer.ejs') %>
-
     <%- include('partials/foot.ejs') %>
 </body>
 </html>
