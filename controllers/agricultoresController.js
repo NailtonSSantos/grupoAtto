@@ -8,6 +8,14 @@ router.get('/', async (req, res) => {
   res.status(200).json(agricultores);
 });
 
+Agricultores.create({
+  razaosocial: "Teste",
+  nome: "Teste",
+  cpf: "07269143552",
+  celular: "66996555525",
+  estado: "MT",
+  cidade: "ROO",
+})
 
 
 module.exports = router;
