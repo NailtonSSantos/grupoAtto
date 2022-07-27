@@ -1,14 +1,16 @@
 const express = require('express');
 const path = require('path');
 const app = express();
+const bodyParser = require('body-parser');
+const controllers = require('./controllers');
+
+//app.use(express.json());
 
 //DEFINI O TEMPLATE ENGINE
 app.set('view engine', 'ejs')
 
-
-//DEFINI OS ARQUIVOS ESTÁTICOS
-//app.use(express.static(path.join(__dirname, 'views')));
-
+app.use(bodyParser.urlencoded({ extended: false}))
+app.use(bodyParser.json());
 
 //DEFINI OS ARQUIVOS PÚBLICOS
 app.use(express.static(path.join(__dirname, 'public')))
@@ -19,13 +21,14 @@ app.get('/', (req, res) => {
     res.render('index');
 })
 
+app.use('/agricultores', controllers.agricultores);
+
 app.get('/cadastroAgricultores', (req, res) => {
     res.render('cadastroAgricultores');
 })
 
-app.post('/salvarAgricultores', (req, res) => {
-    console.log('Salvou');
-    res.send('Salvou o Agricultor');
+app.post('/salvarAgricultores', async(req, res) => {
+    res.send("Nome: " + req.body.nomefantasia)
 })
 
 
