@@ -22,11 +22,11 @@ router.get('/listarAgricultores', (req, res) => {
     })
 })
 
-router.get('/editarAgricultores/:id', async (req, res) => {
-    AgricultoresController.carregar(req.params.id).then((agricultores) => {
-        res.render('/editarAgricultores', {
-           // agricultores: agricultores.toJSON(),
-            //agricultores: agricultores.map(agricultores => agricultores.toJSON())
+router.post('/editarAgricultores/:id', async (req, res) => {
+    AgricultoresController.carregar(req.body.id).then((agricultores) => {
+        res.render('editarAgricultores', {
+            agricultores: agricultores.toJSON(),
+            agricultores: agricultores.map(agricultores => agricultores.toJSON())
         })
     }).catch((erro) => {
         console.error(erro)
