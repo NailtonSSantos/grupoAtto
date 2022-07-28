@@ -34,8 +34,8 @@
                             <td><%= agricultores[i].celular %></td>
                             <td><%= agricultores[i].cidade %></td>
                             <td><%= agricultores[i].estado %></td>
-                            <td><button id="btnEditar">Editar</button></td>
-                            <td><button id="btnExcluir">Excluir</button></td>
+                            <td><a href="/editarAgricultores/:id"><button id="btnEditar">Editar</button></a></td>
+                            <td><a href="/excluirAgricultores/:id"><button id="btnExcluir">Excluir</button></a></td>
                         </tr>
                     <% } %>
             </table>

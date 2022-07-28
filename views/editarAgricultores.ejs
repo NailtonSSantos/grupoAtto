@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <%- include('partials/head.ejs') %>
+</head>
+<body>
+
+    <%- include('partials/header.ejs')  %> 
+
+    <h1>Cadastro de Agricultores</h1>
+    <br><br>
+
+    <section class="box">
+        <form action="/editarAgricultores" id="formCadastroAgric" method="post">
+            <fieldset>
+                <legend><b>Grupo Atto Sementes</b></legend>
+                <br>
+                
+                <div class="inputBox">
+                    <input type="text" name="razaosocial" id="razaosocial" class="inputText" value="<%= agricultores.razaosocial %>" required>
+                    <label for="razaosocial" class="labelInput">Razão Social:</label>
+                </div>
+                <br><br>
+                <div class="inputBox">
+                    <input type="text" name="nomefantasia" id="nomefantasia" class="inputText" value="<%= agricultores.nomefantasia %>" required>
+                    <label for="nomefantasia" class="labelInput">Nome Fantasia:</label>
+                </div>
+                <br><br>
+                <label for="cpf"><b>CPF / CNPJ:</b></label>
+                <input type="text" name="cpf" id="cpf" placeholder="CPF ou CNPJ" maxlength="14" value="<%= agricultores.cpf %>" required>
+                <br><br>
+                <div class="inputBox">
+                    <input type="text" name="celular" id="celular" class="inputText" maxlength="15" value="<%= agricultores.celular %>" required>
+                    <label for="celular" class="labelInput">Celular</label>
+                </div>
+                <br><br>
+                <div class="inputBox">
+                    <select name="estado" id="estado" value="<%= agricultores.estado %>" required>
+                        <option value="">Selecione</option>
+                        <option value="AC">Acre</option>
+                        <option value="AL">Alagoas</option>
+                        <option value="AP">Amapá</option>
+                        <option value="AM">Amazonas</option>
+                        <option value="BA">Bahia</option>
+                        <option value="CE">Ceará</option>
+                        <option value="DF">Distrito Federal</option>
+                        <option value="ES">Espirito Santo</option>
+                        <option value="GO">Goiás</option>
+                        <option value="MA">Maranhão</option>
+                        <option value="MS">Mato Grosso do Sul</option>
+                        <option value="MT">Mato Grosso</option>
+                        <option value="MG">Minas Gerais</option>
+                        <option value="PA">Pará</option>
+                        <option value="PB">Paraíba</option>
+                        <option value="PR">Paraná</option>
+                        <option value="PE">Pernambuco</option>
+                        <option value="PI">Piauí</option>
+                        <option value="RJ">Rio de Janeiro</option>
+                        <option value="RN">Rio Grande do Norte</option>
+                        <option value="RS">Rio Grande do Sul</option>
+                        <option value="RO">Rondônia</option>
+                        <option value="RR">Roraima</option>
+                        <option value="SC">Santa Catarina</option>
+                        <option value="SP">São Paulo</option>
+                        <option value="SE">Sergipe</option>
+                        <option value="TO">Tocantins</option>
+                    </select>
+                </div>
+                <br><br>
+                <div class="inputBox">
+                    <input type="text" name="cidade" id="cidade" class="inputText" value="<%= agricultores.cidade %>" required>
+                    <label for="cidade" class="labelInput">Cidade:</label>
+                </div>
+                <br><br>
+                <button type="button" name="btn" id="btn" onclick='javascript:validarCPF()'>Salvar Edição</button>
+            </fieldset>
+        </form>
+    </section>
+
+<br><br>
+
+    <%- include('partials/footer.ejs') %>
+    <%- include('partials/foot.ejs') %>
+</body>
+</html>
