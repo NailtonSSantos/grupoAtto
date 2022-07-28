@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <%- include('partials/head.ejs') %>
+</head>
+<body class="bodylistar">
+
+    <%- include('partials/header.ejs')  %> 
+
+    <h1>Lista de Agricultores</h1>
+    <br><br>
+
+    <section class="boxlistar">
+        <div class="listarbox">
+            <table class="table">
+                <thead class="table-primary">
+                    <tr>
+                        <th>ID</th>
+                        <th>Razão social</th>
+                        <th>Nome</th>
+                        <th>CPF</th>
+                        <th>Celular</th>
+                        <th>Cidade</th>
+                        <th>Estado</th>
+                                            
+                    </tr>
+                </thead>
+                    <% for(var i=0; i<agricultores.length; i++) {%>
+                        <tr>
+                            <td><%= agricultores[i].id %></td>
+                            <td><%= agricultores[i].razaosocial %></td>
+                            <td><%= agricultores[i].nome %></td>
+                            <td><%= agricultores[i].cpf %></td>
+                            <td><%= agricultores[i].celular %></td>
+                            <td><%= agricultores[i].cidade %></td>
+                            <td><%= agricultores[i].estado %></td>
+                            <td><button id="btnEditar">Editar</button></td>
+                            <td><button id="btnExcluir">Excluir</button></td>
+                        </tr>
+                    <% } %>
+            </table>
+        </div>
+    </section>
+
+<br><br>
+
+    <%- include('partials/footer.ejs') %>
+    <%- include('partials/foot.ejs') %>
+</body>
+</html>

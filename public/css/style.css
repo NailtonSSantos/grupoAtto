@@ -3,7 +3,12 @@
 }
 body{
     font-family: Arial, Helvetica, sans-serif;
-    background-image: linear-gradient(to right, rgb(20, 147, 220), rgb(17, 54, 71));
+    background-image: url("../images/agricultura.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-color: black;
     
 }
 .header{
@@ -18,18 +23,31 @@ ul{
 }
 ul li{
     list-style: none;
-    border: 2px solid white;
-    border-radius: 5vh;
+    border-radius: 50%;
+    background-color: white;
     padding: 2vh;
     flex-direction: row;
     margin-right: 2vh;
 }
 ul li a{
-    color: white;
+    color: black;
+    align-items: center;
+    text-transform: uppercase;
     text-decoration: none;
+    position: relative;
+    top: 30%;
+    transform: translateY(-50%); 
+    font-weight: bold;
+}
+a img{
+    border: none;
+    width: 10vh;
+    border-radius: 1vh;
+    top: 25%;
+    transform: translateY(-40%);
 }
 h1{
-    color: rgb(252, 252, 252);
+    color: black;
     position: relative;
     text-align: center;
     padding: 15px;
@@ -38,14 +56,82 @@ h1{
     width: 85vh;
     margin: auto; 
 }
+h2{
+    margin-left: 2vh;
+}
+h3{
+    margin-left: 2vh;
+    margin-bottom: 29%;
+}
 .box{
+    align-items: center;
+    justify-content: center;
     color: rgb(252, 252, 252);
     position: relative;
     background-color: rgba(0, 0, 0, 0.6);
-    padding: 15px;
+    padding: 2%;
     border-radius: 15px;
-    width: 90vh;
-    margin: auto; 
+    border: 1% solid;
+    width: 95%;
+    margin: auto;
+}
+.boxlistar{
+    justify-content: center;
+    color: rgb(252, 252, 252);
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 2%;
+    border-radius: 15px;
+    border: 1% solid;
+    width: 80%;
+    margin: auto;
+}
+.listarbox{
+    border: 1px solid white;
+    padding: 2vh;
+}
+tr{
+    padding: 2px;
+    text-align: left;
+    margin-right: 2px;
+}
+thead{
+    
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.table-primary{
+    width: 100%;
+    padding: 1%;
+    margin: 1%;
+}
+td th{
+    text-align: center;
+    justify-content: center;
+    padding: 1vh;
+}
+#btnEditar{
+    background-color: rgb(4, 97, 4);
+    width: 100%;
+    border: 0.1vh solid white;
+    padding: 15px;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+    border-radius: 10px;
+    margin-left: 1vh;
+}
+#btnExcluir{
+    background-color: rgb(196, 0, 0);
+    width: 90%;
+    border: 0.1vh solid white;
+    padding: 15px;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+    border-radius: 10px;
+    margin-left: 3vh;
 }
 fieldset{
     border: 3px solid rgb(255, 255, 255);
