@@ -35,7 +35,12 @@
                             <td><%= agricultores[i].cidade %></td>
                             <td><%= agricultores[i].estado %></td>
                             <td><a href="/editarAgricultores/<%= agricultores[i].id %>"><button id="btnEditar">Editar</button></a></td>
-                            <td><a href="/excluirAgricultores/<%= agricultores[i].id %>"><button id="btnExcluir">Excluir</button></a></td>
+                            <td>
+                                <form action='/excluirAgricultores' method="post">
+                                    <input type="hidden" name="id" value="<%= agricultores[i].id %>">
+                                    <button id="btnExcluir">Excluir</button>
+                                </form>
+                            </td>
                         </tr>
                     <% } %>
             </table>

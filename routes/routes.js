@@ -22,21 +22,37 @@ router.get('/listarAgricultores', (req, res) => {
     })
 })
 
-router.post('/editarAgricultores/:agricultores.id', async (req, res) => {
-        res.render('index')
+router.get('/editarAgricultores/:id', async (req, res) => {
+    AgricultoresController.carregar(req.params.id).then((agricultores) => {
+        res.render('editarAgricultores', {
+            agricultores: agricultores.toJSON()
+        })
+    }).catch((erro) => {
+        console.error(erro)
+        res.redirect("/")
+        res.send("Falha Abrir Edição! <br>" + "Error: " + erro.message)
+    })
 })
 
-router.post("/excluirAgricultores/:agricultores.id", async (req, res) => {
-    AgricultoresController.excluir(req.params.id).then(() => {
-        req.flash('Usuário deletado com Sucesso!')
+router.post('/editarAgricultores', async (req, res) => {
+    AgricultoresController.atualizar(req.body, req.body.id).then(() => {
         res.redirect('/listarAgricultores')
     }).catch((erro) => {
-        req.flash('error_msg', "Erro ao deletar usuário")
+        console.error(erro)
         res.redirect("/")
+        res.send("Falha Abrir Edição! <br>" + "Error: " + erro.message)
+    })
+})
+
+router.post("/excluirAgricultores", async (req, res) => {
+    AgricultoresController.excluir(req.body.id).then(() => {
+        res.redirect('/listarAgricultores')
+    }).catch((erro) => {
+        console.error(erro)
+        res.redirect("/")
+        res.send("Falha Excluir! <br>" + "Error: " + erro.message)
     })
 });
-
-
 
 router.post('/salvarAgricultores', (req, res) => {
     AgricultoresController.inserir(req.body).then((agricultor) => {
