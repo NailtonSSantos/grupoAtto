@@ -23,7 +23,7 @@ router.get('/listarAgricultores', (req, res) => {
 })
 
 router.post('/editarAgricultores/:id', async (req, res) => {
-    AgricultoresController.carregar(req.body.id).then((agricultores) => {
+    AgricultoresController.carregar(req.params.id).then((agricultores) => {
         res.render('editarAgricultores', {
             agricultores: agricultores.toJSON(),
             agricultores: agricultores.map(agricultores => agricultores.toJSON())
