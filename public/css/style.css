@@ -61,7 +61,7 @@ h2{
 }
 h3{
     margin-left: 2vh;
-    margin-bottom: 31%;
+    margin-bottom: 34%;
 }
 .box{
     align-items: center;
@@ -137,10 +137,9 @@ fieldset{
     border: 3px solid rgb(255, 255, 255);
 }
 legend{
-    border: 1px solid dodgerblue;
     padding: 10px;
     text-align: center;
-    background-color: dodgerblue;
+    background-color: rgb(18, 100, 7);
     border-radius: 8px;
 }
 .inputBox{
@@ -185,17 +184,20 @@ legend{
     font-size: 15px;
 }
 #btn{
-    background-image: linear-gradient(to right,rgb(0, 92, 197), rgb(90, 20, 220));
-    width: 100%;
+    background-color: rgb(18, 100, 7);
+    width: 20%;
+    margin-left: 60%;
+    transform: translateX(100%);
     border: none;
     padding: 15px;
     color: white;
-    font-size: 15px;
+    font-weight: bold;
+    font-size: 17px;
     cursor: pointer;
     border-radius: 10px;
 }
 #btn:hover{
-    background-image: linear-gradient(to right,rgb(0, 80, 172), rgb(80, 19, 195));
+    background-color: rgb(24, 160, 6);
 }
 footer{
     margin-bottom: 0%;

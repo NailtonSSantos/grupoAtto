@@ -22,21 +22,12 @@ router.get('/listarAgricultores', (req, res) => {
     })
 })
 
-router.post('/editarAgricultores/:id', async (req, res) => {
-    AgricultoresController.carregar(req.params.id).then((agricultores) => {
-        res.render('editarAgricultores', {
-            agricultores: agricultores.toJSON(),
-            agricultores: agricultores.map(agricultores => agricultores.toJSON())
-        })
-    }).catch((erro) => {
-        console.error(erro)
-        res.redirect("/")
-        res.send("Falha Abrir Edição! <br>" + "Error: " + erro.message)
-    })
+router.post('/editarAgricultores/:agricultores.id', async (req, res) => {
+        res.render('index')
 })
 
-router.post("/excluirAgricultores", async (req, res) => {
-    controllers.agricultores.excluir(req.body.id).then(() => {
+router.post("/excluirAgricultores/:agricultores.id", async (req, res) => {
+    AgricultoresController.excluir(req.params.id).then(() => {
         req.flash('Usuário deletado com Sucesso!')
         res.redirect('/listarAgricultores')
     }).catch((erro) => {
