@@ -1,3 +1,6 @@
+src="https://"
+
+//VALIDAÇÃO DE CPF
 function verificarCPF(cpf) {  
     // Remove os pontos/traço da expressão regular, caso exista
     cpf = cpf.replace(/[^\d]+/g,'');    
@@ -56,6 +59,41 @@ function verificarCPF(cpf) {
 
     return true;
 }
+
+//FUNÇÃO DE CONFIRMAÇÃO DE EXCLUSÃO
+function desejaExcluir(){
+    var mensagem;
+    var opcao=confirm("Tem certeza que deseja Excluir o Cadastro?");
+    if (opcao==true)
+      {
+        mensagem="você pressionou OK!";
+        window.location.reload();
+      }
+    else
+      {
+        mensagem="Você pressionou Cancelar!";
+      }
+    document.getElementById("demo").innerHTML=mensagem;
+}
+
+/*function desejaExcluir(){
+var opcao=confirm("Tem certeza que deseja Excluir o Cadastro?");
+    if (opcao==true)
+      {
+        $.ajax({
+            URL: `/excluirAgricultores/${id}`,
+            type: 'DELETE',
+            sucess: function(resultado){
+                if(resultado == 'OK'){
+                    window.location.reload();
+                }else{
+                    alert(resultado)
+                }
+            }
+        })
+      }
+}*/
+
 
 function validarCPF() {
     var cpf = document.getElementById('cpf').value;

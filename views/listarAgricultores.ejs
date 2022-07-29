@@ -36,10 +36,11 @@
                             <td><%= agricultores[i].estado %></td>
                             <td><a href="/editarAgricultores/<%= agricultores[i].id %>"><button id="btnEditar">Editar</button></a></td>
                             <td>
-                                <form action='/excluirAgricultores' method="post">
+                                <button id="btnExcluir" onclick='javascript:desejaExcluir()'>Excluir</button>
+                                <!--<form action='/excluirAgricultores' method="post">
                                     <input type="hidden" name="id" value="<%= agricultores[i].id %>">
-                                    <button id="btnExcluir">Excluir</button>
-                                </form>
+                                    <button id="btnExcluir" onclick='javascript:desejaExcluir()'>Excluir</button>
+                                </form>-->
                             </td>
                         </tr>
                     <% } %>
