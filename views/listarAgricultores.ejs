@@ -37,15 +37,30 @@
                             <td><%= agricultores[i].cidade %></td>
                             <td><%= agricultores[i].estado %></td>
                             <td><a href="/editarAgricultores/<%= agricultores[i].id %>"><button id="btnEditar">Editar</button></a></td>
-                            <td>
+                            <!--<td>
                                 <form action='/excluirAgricultores' method="post">
                                     <input type="hidden" name="id" value="<%= agricultores[i].id %>">
                                     <button id="btnExcluir">Excluir</button>
                                 </form>
-                            </td>
-                            <!--
-                            <td><button id="idAgricultor" class="btnExcluir" value="<%= agricultores[i].id %>" onclick='javascript:desejaExcluir()'>Excluir</button></td>-->
+                            </td>-->
+                            
+                            <td><button id="idAgricultor" class="btnExcluir" value="<%= agricultores[i].id %>" onclick='javascript:confirmacao()'>Excluir</button></td>
                         </tr>
+
+                        <div class="modalConfirmacao">
+                            <h1>DESEJA EXCLUIR O CADASTRO?</h1>
+                            <section class="container row">
+                                <div class="item">
+                                    <form action='/excluirAgricultores' method="post">
+                                    <input type="hidden" name="id" value="<%= agricultores[i].id %>">
+                                    <button class="btnConfirmar">SIM, CONFIRMAR</button>
+                                </form>
+                                </div>
+                                <div class="item">
+                                    <button class="btnFechar" onclick="fechar()">FECHAR</button>
+                                </div>
+                            </section>
+                        </div>
                     <% } %>
             </table>
         </div>

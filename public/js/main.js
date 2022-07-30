@@ -116,40 +116,21 @@ function verificarCNPJ(cnpj) {
 
 
 //FUNÇÃO DE CONFIRMAÇÃO DE EXCLUSÃO
-/*function desejaExcluir(){
-    let id = document.getElementById('idAgricultor').value;
-    var mensagem;
-    var opcao=confirm("Tem certeza que deseja Excluir o Cadastro?");
-    if (opcao==true)
-      {
-        mensagem="você pressionou OK!";
-        window.location.reload();
-      }
-    else
-      {
-        mensagem="Você pressionou Cancelar!";
-      }
-    document.getElementById("demo").innerHTML=mensagem;
-}*/
+function confirmacao(){
 
-function desejaExcluir(){
-let id = document.getElementById('idAgricultor').value;
-var opcao=confirm("Tem certeza que deseja Excluir o Cadastro?");
-    if (opcao==true)
-      {
-        $.ajax({
-            URL: `/excluirAgricultores/${id}`,
-            type: 'DELETE',
-            sucess: function(resultado){
-                if(resultado == 'OK'){
-                    console.log()
-                    window.location.reload();
-                }else{
-                    alert(resultado)
-                }
-            }
-        })
-      }
+    let modalConfirmacao = document.querySelector('.modalConfirmacao')
+
+    modalConfirmacao.style.display = 'block';
+}
+
+
+function fechar(){
+
+    let modalConfirmacao = document.querySelector('.modalConfirmacao')
+
+
+    modalConfirmacao.style.display = 'none';
+
 }
 
 
