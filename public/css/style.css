@@ -119,7 +119,7 @@ td th{
     border-radius: 10px;
     margin-left: 4vh;
 }
-#btnExcluir{
+#btnExcluir, .btnExcluir{
     background-color: rgb(196, 0, 0);
     width: 90%;
     border: 0.1vh solid white;

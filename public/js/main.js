@@ -116,7 +116,8 @@ function verificarCNPJ(cnpj) {
 
 
 //FUNÇÃO DE CONFIRMAÇÃO DE EXCLUSÃO
-function desejaExcluir(){
+/*function desejaExcluir(){
+    let id = document.getElementById('idAgricultor').value;
     var mensagem;
     var opcao=confirm("Tem certeza que deseja Excluir o Cadastro?");
     if (opcao==true)
@@ -129,9 +130,10 @@ function desejaExcluir(){
         mensagem="Você pressionou Cancelar!";
       }
     document.getElementById("demo").innerHTML=mensagem;
-}
+}*/
 
-/*function desejaExcluir(){
+function desejaExcluir(){
+let id = document.getElementById('idAgricultor').value;
 var opcao=confirm("Tem certeza que deseja Excluir o Cadastro?");
     if (opcao==true)
       {
@@ -140,6 +142,7 @@ var opcao=confirm("Tem certeza que deseja Excluir o Cadastro?");
             type: 'DELETE',
             sucess: function(resultado){
                 if(resultado == 'OK'){
+                    console.log()
                     window.location.reload();
                 }else{
                     alert(resultado)
@@ -147,7 +150,7 @@ var opcao=confirm("Tem certeza que deseja Excluir o Cadastro?");
             }
         })
       }
-}*/
+}
 
 
 function validarDoc() {
