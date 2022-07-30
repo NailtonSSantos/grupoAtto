@@ -16,11 +16,16 @@ PASSOS:
 
 - Instalar o Sequelize (ORM para mysql): No terminal digita npm install --save sequelize
 e npm install --save-dev sequelize-cli
-npx sequelize-cli init
 
 - Instalar o driver da Base de Dados: npm install --save mysql2
 
-- Para criar o banco de dados, com o Mysql instalado e configurado, abra o terminal e digite: npx sequelize db:create. Ou conecte no MYSQL pelo terminal: mysql -h localhost -u root -p. A senha que usei foi 123. Depois use o seguinte comando: create database atto default character set utf8mb4 collate utf8mb4_unicode_ci; Também é possível criar de forma gráfica usando o Workbench.
+- Para criar o banco de dados, com o Mysql instalado, observe as seguintes configurações:
+Usuário: root
+Senha: 123
+Caso não queira usar esses dados, altere no arquivo config.json para os dados do seu banco Mysql.
+Ou conecte no MYSQL pelo terminal: mysql -h localhost -u root -p. Depois use o seguinte comando: create database if not exists atto default character set utf8mb4 collate utf8mb4_unicode_ci; Também é possível criar de forma gráfica usando o Workbench.
+
+- Depois abra o terminal e digite: npx sequelize db:create. (CRIA O BANCO DE DADOS)
 
 - Para criar a tabela, execute, no terminal, o seguinte comando: npx sequelize db:migrate
 

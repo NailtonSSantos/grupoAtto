@@ -9,6 +9,7 @@ module.exports = {
           razaosocial: "Silva & SIlva LTDA",
           nome: "Casa do Morango",
           cpf: "07269143552",
+          cnpj: "09509017000143",
           celular: "(66) 9 9655-5525",
           estado: "Mato Grosso",
           cidade: "Rondonópolis"
@@ -17,6 +18,7 @@ module.exports = {
           razaosocial: "Dantas & Cia LTDA",
           nome: "Dantas Ortifruti",
           cpf: "06358896541",
+          cnpj: "09509017000143",
           celular: "(66) 9 9855-3422",
           estado: "Mato Grosso",
           cidade: "Rondonópolis"
@@ -25,6 +27,7 @@ module.exports = {
           razaosocial: "Souza & Mattos LTDA",
           nome: "Fazenda 2 Irmãos",
           cpf: "04235689477",
+          cnpj: "09509017000143",
           celular: "(66) 9 9982-3636",
           estado: "Mato Grosso",
           cidade: "Poxoréu"

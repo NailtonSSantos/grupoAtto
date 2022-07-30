@@ -50,6 +50,7 @@ h1{
     color: black;
     position: relative;
     text-align: center;
+    text-shadow: 1px 1px white;
     padding: 15px;
     border-radius: 15px;
     border-bottom: 5px solid rgba(0, 0, 0, 0.6);
@@ -83,33 +84,29 @@ h3{
     padding: 2%;
     border-radius: 15px;
     border: 1% solid;
-    width: 80%;
+    width: 90%;
     margin: auto;
 }
 .listarbox{
     border: 1px solid white;
-    padding: 2vh;
+    padding: 1vh;
 }
 tr{
-    padding: 2px;
     text-align: left;
     margin-right: 2px;
 }
 thead{
-    
     align-items: center;
     justify-content: center;
     text-align: center;
 }
 .table-primary{
     width: 100%;
-    padding: 1%;
     margin: 1%;
 }
 td th{
     text-align: center;
     justify-content: center;
-    padding: 1vh;
 }
 #btnEditar{
     background-color: rgb(4, 97, 4);
@@ -120,7 +117,7 @@ td th{
     font-size: 15px;
     cursor: pointer;
     border-radius: 10px;
-    margin-left: 1vh;
+    margin-left: 4vh;
 }
 #btnExcluir{
     background-color: rgb(196, 0, 0);
@@ -131,7 +128,16 @@ td th{
     font-size: 15px;
     cursor: pointer;
     border-radius: 10px;
-    margin-left: 3vh;
+    margin-left: 6vh;
+}
+.janelaConfirmacao{
+    background-color: white;
+    position: fixed;
+    border-radius: 5vh;
+    width: 50%;
+    height: 40%;
+    margin-top: -60vh;
+    margin-left: 40vh;
 }
 fieldset{
     border: 3px solid rgb(255, 255, 255);
@@ -168,7 +174,7 @@ legend{
     font-size: 12px;
     color: dodgerblue;
 }
-#cpf{
+.documento{
     border: none;
     padding: 8px;
     border-radius: 10px;
@@ -183,7 +189,7 @@ legend{
     outline: none;
     font-size: 15px;
 }
-#btn{
+#btnSalvar{
     background-color: rgb(18, 100, 7);
     width: 20%;
     margin-left: 60%;
@@ -196,7 +202,7 @@ legend{
     cursor: pointer;
     border-radius: 10px;
 }
-#btn:hover{
+#btnSalvar:hover{
     background-color: rgb(24, 160, 6);
 }
 footer{

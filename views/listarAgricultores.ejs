@@ -19,6 +19,7 @@
                         <th>Razão social</th>
                         <th>Nome</th>
                         <th>CPF</th>
+                        <th>CNPJ</th>
                         <th>Celular</th>
                         <th>Cidade</th>
                         <th>Estado</th>
@@ -31,16 +32,16 @@
                             <td><%= agricultores[i].razaosocial %></td>
                             <td><%= agricultores[i].nome %></td>
                             <td><%= agricultores[i].cpf %></td>
+                            <td><%= agricultores[i].cnpj %></td>
                             <td><%= agricultores[i].celular %></td>
                             <td><%= agricultores[i].cidade %></td>
                             <td><%= agricultores[i].estado %></td>
                             <td><a href="/editarAgricultores/<%= agricultores[i].id %>"><button id="btnEditar">Editar</button></a></td>
                             <td>
-                                <button id="btnExcluir" onclick='javascript:desejaExcluir()'>Excluir</button>
-                                <!--<form action='/excluirAgricultores' method="post">
+                                <form action='/excluirAgricultores' method="post">
                                     <input type="hidden" name="id" value="<%= agricultores[i].id %>">
-                                    <button id="btnExcluir" onclick='javascript:desejaExcluir()'>Excluir</button>
-                                </form>-->
+                                    <button id="btnExcluir">Excluir</button>
+                                </form>
                             </td>
                         </tr>
                     <% } %>

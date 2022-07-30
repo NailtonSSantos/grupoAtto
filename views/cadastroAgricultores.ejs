@@ -25,8 +25,11 @@
                     <label for="nomefantasia" class="labelInput">Nome Fantasia:</label>
                 </div>
                 <br><br>
-                <label for="cpf"><b>CPF / CNPJ:</b></label>
-                <input type="text" name="cpf" id="cpf" placeholder="CPF ou CNPJ" maxlength="14" required>
+                <label for="cpf"><b>CPF:</b></label>
+                <input type="text" name="cpf" class="documento" id="cpf" placeholder="CPF - Apenas Números" maxlength="14">
+                <label>&emsp;&emsp;&emsp;&emsp;<b>OU</b>&emsp;&emsp;&emsp;&emsp;</label>
+                <label for="cpf"><b>CNPJ:</b></label>
+                <input type="text" name="cnpj" class="documento" id="cnpj" placeholder="CNPJ - Apenas Números" maxlength="18">
                 <br><br>
                 <div class="inputBox">
                     <input type="text" name="celular" id="celular" class="inputText" maxlength="15" required>
@@ -71,7 +74,7 @@
                     <label for="cidade" class="labelInput">Cidade:</label>
                 </div>
                 <br><br>
-                <button type="button" name="btn" id="btn" onclick='javascript:validarCPF()'>Salvar</button>
+                <button type="button" name="btnSalvar" id="btnSalvar" onclick='javascript:validarDoc()'>Salvar</button>
             </fieldset>
         </form>
     </section>

@@ -46,11 +46,10 @@ router.post('/editarAgricultores', async (req, res) => {
 
 router.post("/excluirAgricultores", async (req, res) => {
     AgricultoresController.excluir(req.body.id).then(() => {
-        //res.redirect('/listarAgricultores')
-        res.status(200).send('OK')
+        res.redirect('/listarAgricultores')
     }).catch((erro) => {
         console.error(erro)
-        //res.redirect("/")
+        res.redirect("/")
         res.send("Falha Excluir! <br>" + "Error: " + erro.message)
     })
 });

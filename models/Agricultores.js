@@ -3,6 +3,7 @@ const Agricultores = (sequelize, DataTypes) => {
         razaosocial: DataTypes.STRING,
         nome: DataTypes.STRING,
         cpf: DataTypes.STRING,
+        cnpj: DataTypes.STRING,
         celular: DataTypes.STRING,
         estado: DataTypes.STRING,
         cidade:DataTypes.STRING,

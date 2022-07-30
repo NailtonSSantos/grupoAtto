@@ -19,12 +19,11 @@ module.exports = {
     },
     cpf: {
         type: Sequelize.STRING,
-        allowNull: false
     },
-    /*cnpj: {
+    cnpj: {
         type: Sequelize.STRING,
         allowNull: false
-    },*/
+    },
     celular: {
         type: Sequelize.STRING,
         allowNull: false
