@@ -1,6 +1,6 @@
 # grupoAtto
 
-Sistema criado com Node para o processo seletivo da Atto Sementes Rondonópolis
+Sistema de cadastro de Agricultores, criado com Node para a Atto Sementes Rondonópolis
 
 Requisitos: Visual Studeo, Gitbash, Mysql
 
