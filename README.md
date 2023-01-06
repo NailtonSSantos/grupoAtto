@@ -1,6 +1,6 @@
 # grupoAtto
 
-Sistema de cadastro de Agricultores, criado com Node para a Atto Sementes Rondonópolis
+Sistema de cadastro de Agricultores.
 
 Requisitos: Visual Studeo, Gitbash, Mysql
 
